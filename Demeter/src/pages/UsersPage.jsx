@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useUser } from '../context/UserContext';
-import DeleteUser from './DeleteUser';
+import { Link } from 'react-router-dom'
+import { useUser } from '../context/UserContext.jsx'
+import DeleteUser from './UserDeletePage.jsx';
 import UserCard from '../components/User.card';
 
 function UsersPage() {
@@ -10,7 +11,7 @@ function UsersPage() {
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
     const [userToDelete, setUserToDelete] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 7;
+    const itemsPerPage = 10;
 
     useEffect(() => {
         getUsers();
@@ -34,7 +35,7 @@ function UsersPage() {
 
     const confirmDelete = () => {
         if (userToDelete) {
-            deleteUser(userToDelete.ID_USUARIO);
+            deleteUser(userToDelete.ID_User);
             setUserToDelete(null);
             setIsDeleteModalOpen(false);
         }
