@@ -6,7 +6,7 @@ import { UserProvider } from './context/UserContext.jsx'
 
 //Pages
 import UsersPage from './pages/UsersPage.jsx'
-import UserAddPage from './pages/UserAddPage.jsx'
+import UserCreatePage from './pages/UserCreatePage.jsx'
 import UserUpdatePage from './pages/UserUpdatePage.jsx'
 
 //Menú
@@ -18,12 +18,12 @@ function App() {
       <UserProvider>
         <BrowserRouter>
           <div className="flex">
-            {/* <Navbar /> */}
+            <Navbar />
             <main className='container mx-auto px-10 flex-grow'>
               <Routes>
                 <Route path='/' element={<h1>DASHBOARD</h1>} />
                 <Route path='/user' element={<UsersPage />} />
-                <Route path='/add_user' element={<UserAddPage />} />
+                <Route path='/add_user' element={<UserCreatePage />} />
                 <Route path='/update_user' element={<UserUpdatePage />} />
               </Routes>
             </main>

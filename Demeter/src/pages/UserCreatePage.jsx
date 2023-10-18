@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 
-function UserAddPage() {
+function UserCreatePage() {
     const { user, getUsers } = useUser();
 
     return (
@@ -12,4 +12,4 @@ function UserAddPage() {
     );
 }
 
-export default UserAddPage
+export default UserCreatePage

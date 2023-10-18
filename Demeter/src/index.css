@@ -3,13 +3,21 @@
 @tailwind utilities;
 
 body {
-  background: #bbbbbb;
+  background: #e6e6e6;
   font-family: 'Times New Roman', Times, serif;
   font-size: 15px;
 }
 
 h1 {
   font-size: 25px;
+}
+
+.menu {
+  width: 210px;
+}
+
+.menuAbajo {
+  margin-right: 100px;
 }
 
 .boton-izquierda {
