@@ -5,9 +5,13 @@ import { RoleProvider } from './context/RoleContext.jsx'
 import { UserProvider } from './context/UserContext.jsx'
 
 //Pages
-import UsersPage from './pages/UsersPage.jsx'
-import UserCreatePage from './pages/UserCreatePage.jsx'
-import UserUpdatePage from './pages/UserUpdatePage.jsx'
+import Users from './pages/UsersPage.jsx'
+import UserCreate from './pages/UserCreatePage.jsx'
+import UserUpdate from './pages/UserUpdatePage.jsx'
+
+import Roles from './pages/RolesPage.jsx'
+import RoleCreate from './pages/RoleCreatePage.jsx'
+import RoleUpdate from './pages/RoleUpdatePage.jsx'
 
 //Menú
 import Navbar from './components/Navbar.jsx'
@@ -22,9 +26,12 @@ function App() {
             <main className='container mx-auto px-10 flex-grow'>
               <Routes>
                 <Route path='/' element={<h1>DASHBOARD</h1>} />
-                <Route path='/user' element={<UsersPage />} />
-                <Route path='/add_user' element={<UserCreatePage />} />
-                <Route path='/update_user' element={<UserUpdatePage />} />
+                <Route path='/user' element={<Users />} />
+                <Route path='/add_user' element={<UserCreate />} />
+                <Route path='/update_user' element={<UserUpdate />} />
+                <Route path='/role' element={<Roles />} />
+                <Route path='/add_role' element={<RoleCreate />} />
+                <Route path='/update_role' element={<RoleUpdate />} />
               </Routes>
             </main>
           </div>

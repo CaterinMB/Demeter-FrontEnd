@@ -4,7 +4,7 @@ import { useUser } from '../context/UserContext.jsx'
 import DeleteUser from './UserDeletePage.jsx';
 import UserCard from '../components/User.card';
 
-function UsersPage() {
+function Users() {
     const { user, getUsers, deleteUser } = useUser();
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredUser, setFilteredUser] = useState([]);
@@ -85,7 +85,7 @@ function UsersPage() {
                         <th className="border border-gray-400 px-2 py-2 w-1/7">Apellido</th>
                         <th className="border border-gray-400 px-2 py-2 w-1/7">Tipo</th>
                         <th className="border border-gray-400 px-2 py-2 w-1/7">Estado</th>
-                        <th className="border border-gray-400 px-4 py-2 w-1/7">Acciones</th>
+                        <th className="border border-gray-400 px-2 py-2 w-1/7">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -130,4 +130,4 @@ function UsersPage() {
     );
 }
 
-export default UsersPage
+export default Users

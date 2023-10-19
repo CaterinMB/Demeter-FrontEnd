@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 
-function UserUpdatePage() {
+function UserUpdate() {
     const { user, getUsers } = useUser();
 
     return (
@@ -12,4 +12,4 @@ function UserUpdatePage() {
     );
 }
 
-export default UserUpdatePage
+export default UserUpdate
