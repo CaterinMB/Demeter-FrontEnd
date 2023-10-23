@@ -1,69 +1,186 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background: #e6e6e6;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 25px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.menu {
+  width: 210px;
+}
+
+.menuAbajo {
+  margin-right: 100px;
+}
+
+.boton-izquierda {
+  margin-top: 220px;
+  margin-right: 340px;
+}
+
+.boton-derecha {
+  margin-top: 220px;
+  margin-left: -100px;
+}
+
+.boton-izquierda-2 {
+  margin-top: 320px;
+  margin-right: 340px;
+}
+
+.boton-derecha-2 {
+  margin-top: 320px;
+  margin-left: -100px;
+}
+
+.deleteText {
+  margin-top: 50px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: -50px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 1000; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1001; 
+  max-width: 90%; 
+  width: 400px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-container button {
+  margin-top: 100px;
+  margin-right: 10px; 
+  min-width: 100px; 
+}
+
+.toggle-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.inactive .toggle-icon {
+  transform: translateX(100%); 
+  color: gray;
+}
+
+.estado-icon {
+  font-size: 32px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px; 
+  width: 48px;
+  border-radius: 50%; 
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.estado-icon.active {
+  color: rgba(232, 120, 0, 0.819); 
+}
+
+.estado-icon.inactive {
+  color: gray; 
+}
+
+.barra-container {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-left: 105px;
+}
+
+.adjust {
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-left: 27px;
+}
+
+.adjust-two {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.width-column {
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap; 
+  overflow-wrap: anywhere; 
+  overflow-x: auto; 
+}
+
+.select-scrollable {
+  max-height: 150px; 
+  overflow-y: auto;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 150px; 
+  overflow-y: auto; 
+  z-index: 1001; 
+}
+
+.custom-select-container .react-select__menu {
+  max-height: 150px; 
+}
+
+.down {
+  margin-top: -10px;
+}
+
+.inferior {
+  margin-bottom: -70px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.user-card:hover {
+  background-color: #e0e0e0;
+}
+
+strong {
+  color: red;
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Esto creará 2 columnas igualmente espaciadas */
+  gap: 5px; /* Espacio entre los elementos */
 }
