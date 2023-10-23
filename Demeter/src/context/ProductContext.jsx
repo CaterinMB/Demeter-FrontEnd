@@ -1,0 +1,53 @@
+import { createContext, useState, useContext, useEffect } from 'react'
+import { getProducts} from '../api/product.request.js'
+
+export const ProductContext = createContext();
+
+export const useProduct = () => {
+    const context = useContext(ProductContext);
+    if (!context) {
+        throw new Error("El useUser debe usarse dentro de ProductProvider")
+    }
+    return context;
+}
+
+export const ProductProvider = ({ children }) => {
+
+    const [Products, setProducts] = useState([]);
+    const [Product, setProduct] = useState([]);
+
+
+    const fetchProduct = async (id) => {
+        try {
+            const res = await getProducts(id);
+            setProducts(res.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+    const getProduct = async (id) => {
+        try {
+            const res = await getProduct(id);
+            setProduct(res.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+
+
+    return (
+        <ProductContext.Provider
+            value={{
+                Product,
+                Products,
+                fetchProduct,
+                getProduct     
+            }}
+        >
+            {children}
+        </ProductContext.Provider>
+    );
+};

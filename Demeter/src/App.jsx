@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //Context
 import { ProductCategoriesProvider } from './context/ProductCategoriesContext.jsx'
+import { ProductProvider } from './context/ProductContext.jsx'
 
 //Pages
 import Sales from './pages/sales.jsx'
@@ -11,6 +12,7 @@ import Navbar from './components/Navbar.jsx'
 function App() {
   return (
     <BrowserRouter>
+    <ProductProvider>
       <ProductCategoriesProvider>
         <div className="flex">
           <Navbar />
@@ -22,6 +24,7 @@ function App() {
           </main>
         </div>
       </ProductCategoriesProvider>
+    </ProductProvider>
     </BrowserRouter>
   );
 }
