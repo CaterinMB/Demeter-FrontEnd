@@ -10,7 +10,7 @@ import UserAddPage from './pages/UserAddPage.jsx'
 import UserUpdatePage from './pages/UserUpdatePage.jsx'
 
 //Menú
-import Navbar from './components/Navbar.jsx'
+import Navbar from './components/Menú/Navbar.jsx'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <UserProvider>
         <BrowserRouter>
           <div className="flex">
-            {/* <Navbar /> */}
+            <Navbar />
             <main className='container mx-auto px-10 flex-grow'>
               <Routes>
                 <Route path='/' element={<h1>DASHBOARD</h1>} />
