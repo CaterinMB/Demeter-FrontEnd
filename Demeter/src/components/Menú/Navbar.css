@@ -1,7 +1,7 @@
 .pc-sidebar {
     background: #1c232f;
     box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-    width: 210px;
+    width: 220px;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -45,14 +45,14 @@
 
 .pc-sidebar .pc-micon i {
     font-size: 25px;
-    color: #d4e2f5;
+    color: #1c232f;
 }
 
 .pc-sidebar .pc-micon>svg {
     width: 18px;
     height: 18px;
     color: #bfcddf;
-    fill: #7267ef33;
+    fill: #1c232f;
 }
 
 .pc-sidebar .pc-link {
@@ -127,7 +127,7 @@
 .pc-sidebar .pc-navbar>.pc-item.active>.pc-link,
 .pc-sidebar .pc-navbar>.pc-item:focus>.pc-link,
 .pc-sidebar .pc-navbar>.pc-item:hover>.pc-link {
-    background: #394c68;
+    background: #1c232f;
 }
 
 .pc-sidebar .pc-hasmenu.pc-trigger>.pc-submenu {
