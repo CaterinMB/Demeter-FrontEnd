@@ -20,7 +20,7 @@ export const ProductProvider = ({ children }) => {
     const fetchProduct = async (id) => {
         try {
             const res = await getProducts(id);
-            setProducts(res.data)
+            return(res.data)
         } catch (error) {
             console.log(error)
         }
