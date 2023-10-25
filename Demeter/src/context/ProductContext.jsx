@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect } from 'react'
-import { getProducts} from '../api/product.request.js'
+import { getProducts, getAllProduct} from '../api/product.request.js'
 
 export const ProductContext = createContext();
 
@@ -15,6 +15,7 @@ export const ProductProvider = ({ children }) => {
 
     const [Products, setProducts] = useState([]);
     const [Product, setProduct] = useState([]);
+    const [AllProducts, setAllProducts] = useState([]);
 
 
     const fetchProduct = async (id) => {
@@ -36,6 +37,14 @@ export const ProductProvider = ({ children }) => {
         }
     }
 
+    const getwholeProducts = async () => {
+        try {
+            const res = await getAllProduct();
+            setAllProducts(res.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
 
     return (
@@ -43,8 +52,10 @@ export const ProductProvider = ({ children }) => {
             value={{
                 Product,
                 Products,
+                AllProducts,
                 fetchProduct,
-                getProduct     
+                getProduct,
+                getwholeProducts    
             }}
         >
             {children}

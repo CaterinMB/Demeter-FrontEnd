@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //Context
 import { ProductCategoriesProvider } from './context/ProductCategoriesContext.jsx'
 import { ProductProvider } from './context/ProductContext.jsx'
+import  {SaleProvider} from './context/SaleContext.jsx'
 
 //Pages
 import Sales from './pages/sales.jsx'
@@ -14,6 +15,7 @@ function App() {
     <BrowserRouter>
     <ProductProvider>
       <ProductCategoriesProvider>
+        <SaleProvider>
         <div className="flex">
           <Navbar />
           <main className='container mx-auto px-10 flex-grow'>
@@ -23,6 +25,7 @@ function App() {
             </Routes>
           </main>
         </div>
+        </SaleProvider>
       </ProductCategoriesProvider>
     </ProductProvider>
     </BrowserRouter>
