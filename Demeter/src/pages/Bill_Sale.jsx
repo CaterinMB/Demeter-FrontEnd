@@ -71,7 +71,7 @@ function Bill() {
                             type="date"
                             id="date"
                             name="date"
-                            className="w-full p-2 border rounded"
+                            className="w-full p-2 border rounded-xl"
                             defaultValue={new Date().toISOString().substr(0, 10)}
                         />
                     </div>
@@ -80,7 +80,7 @@ function Bill() {
                         <select
                             id="waiter"
                             name="waiter"
-                            className="w-full p-2 border rounded"
+                            className="w-full p-2 border rounded-xl"
                         >
                             <option value="mesero1">Mesero 1</option>
                             <option value="mesero2">Mesero 2</option>
@@ -88,7 +88,7 @@ function Bill() {
                         </select>
                     </div>
                     <div className="w-full overflow-x-auto">
-                        <table className="min-w-full bg-white border">
+                        <table className="min-w-full bg-white border rounded-xl">
                             <thead>
                                 <tr>
                                     <th className="">Producto</th>
